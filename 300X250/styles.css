@@ -275,6 +275,21 @@ img {
   border: 0;
 }
 
+.ripple {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-radius: 100%;
+  border: 3px solid #02bbee15;
+  border-top-color: #02bbee25;
+  border-left-color: #02bbee25;
+  background-color: #05153255;
+  top: 37.25%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateX(60deg);
+  transform-origin: center;
+}
+
 #logo {
   transform-origin: center center;
   width: 144px;
@@ -324,7 +339,9 @@ img {
 
 .l-dcricle {
   /* transform: translate(-23%, -77%); */
-  top: -27px;
+  /* top: -27px;
+  left: 3px; */
+  top: -30px;
   left: 3px;
 }
 
