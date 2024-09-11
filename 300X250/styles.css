@@ -122,10 +122,10 @@ img {
 
 #combine_container {
   position: absolute;
-  /* width: 172px;
-  height: 172px; */
-  width: 472px;
-  height: 472px;
+  width: 172px;
+  height: 172px;
+  /* width: 472px;
+  height: 472px; */
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -134,29 +134,36 @@ img {
 .white_dot_wrpr,
 .cyan_dot_wrpr {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 400px;
+  height: 400px;
+  transform: translate(-100px, -100px);
   left: 0;
   top: 0;
 }
 
 .white_dot_wrpr {
-  transform: rotateZ(-45deg);
+  transform: rotateZ(-45deg) translate(-100px, -100px);
 }
 
-.white_dot_wrpr span,
-.cyan_dot_wrpr span {
+.dot {
   width: 33px;
   height: 33px;
   border-radius: 33px;
   position: absolute;
 }
 
-.white_dot_wrpr span {
+.ddot {
+  left: -29px;
+  top: -18px;
+  transform: scale(0.5);
+  /* transform: translate(220px, 47px); */
+}
+
+.white_dot {
   background-color: #fff;
 }
 
-.cyan_dot_wrpr span {
+.cyan_dot {
   background-color: #02bbee;
 }
 
@@ -275,8 +282,8 @@ img {
   position: absolute;
 }
 
-#logo #cross,
-#logo #dots {
+#logo #logo-cross,
+#logo #logo-circles {
   width: 100%;
   height: 100%;
 }

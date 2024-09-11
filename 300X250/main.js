@@ -21,24 +21,24 @@ function animate() {
   tl.set(["#manageBtn .btn_overlay"], { autoAlpha: 0, scale: 0, force3D: true });
   tl.set(["#logo"], { autoAlpha: 0, scale: 0.25, force3D: true });
   tl.set(["#h2", "#sugar_container"], { autoAlpha: 0, y: "100%", force3D: true });
-  // tl.set(["#cross"], { scale:(0.6,0.8), force3D: true });
-  // tl.set(["#dots"], { scale: 0.8, force3D: true });
+  // tl.set(["#logo-cross"], { scale:(0.6,0.8), force3D: true });
+  // tl.set(["#logo-circles"], { scale: 0.8, force3D: true });
 
   tl.addLabel('frame_1', 0)
     .to(['#h1'], 0.5, { autoAlpha: 1, scale: 1, ease: Power2.easeOut }, "frame_1")
     .to(['#logo'], 0.5, { autoAlpha: 1, scale: 1, ease: Power2.easeOut }, "frame_1")
     .to(['.l-circle', '.l-cross'], 0.25, { backgroundColor: '#fff', ease: Power2.easeOut }, "frame_1+=0.25")
-    .to(['#dots'], 0.25, { width: 'calc(100% + 30px)', height: 'calc(100% + 20px)', x: -15, y: -10, ease: Power2.ease }, "frame_1+=0.25")
-    .to(['#dots'], 0.25, { width: 'calc(100% - 20px)', height: 'calc(100% - 15px)', x: 10, y: 7.5, ease: Power2.ease }, "frame_1+=0.5")
-    .to(['#dots'], 0.25, { width: '100%', height: '100%', x: 0, y: 0, ease: Power2.ease }, "frame_1+=0.75")
+    .to(['#logo-circles'], 0.25, { width: 'calc(100% + 30px)', height: 'calc(100% + 20px)', x: -15, y: -10, ease: Power2.ease }, "frame_1+=0.25")
+    .to(['#logo-circles'], 0.25, { width: 'calc(100% - 20px)', height: 'calc(100% - 15px)', x: 10, y: 7.5, ease: Power2.ease }, "frame_1+=0.5")
+    .to(['#logo-circles'], 0.25, { width: '100%', height: '100%', x: 0, y: 0, ease: Power2.ease }, "frame_1+=0.75")
 
   tl.addLabel('frame_2', 3)
 
     .to(['#h1'], 0.5, { autoAlpha: 0, ease: Power2.easeOut }, "frame_2+=0")
-    .to(['#cross'], 0.5, { scale: 0, autoAlpha: 0, ease: Power2.easeOut }, "frame_2+=0")
+    .to(['#logo-cross'], 0.5, { scale: 0, autoAlpha: 0, ease: Power2.easeOut }, "frame_2+=0")
     .to(['.l-cross'], 0.5, { backgroundColor: '#2ab3d5', autoAlpha: 0, ease: Power2.easeOut }, "frame_2+=0")
-    .to(['#dots'], 0.15, { width: 'calc(100% - 50px)', x: 25, ease: Power2.ease }, "frame_2+=0")
-    .to(['#dots'], 1.5, { rotationZ: 540, ease: Power2.easeNone }, "frame_2+=0")
+    .to(['#logo-circles'], 0.15, { width: 'calc(100% - 50px)', x: 25, ease: Power2.ease }, "frame_2+=0")
+    .to(['#logo-circles'], 1.5, { rotationZ: 540, ease: Power2.easeNone }, "frame_2+=0")
 
 
     .to(['#circle-two'], 0, { autoAlpha: 0, ease: Power2.easeNone }, "frame_2+=0.13")
@@ -86,12 +86,69 @@ function animate() {
     .to(['#ripple4'], 0.2, { autoAlpha: 0, ease: Power2.easeNone }, "frame_2+=2.28")
 
 
-  tl.addLabel('frame_3', 5.5)
-    .to(['#h2', '#sugar_container'], 0.5, { autoAlpha: 0, y: "100%", ease: Power2.easeOut }, "frame_3")
-    // .staggerTo(['#wdot1', '#cdot1', '#wdot2', '#cdot2', '#wdot3', '#cdot3', '#wdot4', '#cdot4',], 0.125, { autoAlpha: 1, ease: Power2.easeNone }, 0.125, 'frame_+=0')
+  tl.addLabel('frame_3', 6.5)
+    .to(['#h2', '#sugar_container'], 1, { autoAlpha: 0, y: "100%", ease: Power2.easeOut }, "frame_3")
     .to(['#h3', '#combine_container'], 0.5, { autoAlpha: 1, ease: Power2.easeOut }, "frame_3+=0.5")
-    .to(['#combine_container'], 4, { rotationZ: 45, ease: Power2.easeNone }, "frame_3+=0.5")
-    .to(['#combine_container'], 4, { rotationZ: 45, ease: Power2.easeNone }, "frame_3+=2")
+    .to(['.white_dot_wrpr', '.cyan_dot_wrpr'], 1, { width: '100%', height: '100%', x: 0, y: 0, ease: Power2.easeNone }, "frame_3+=0.5")
+    .to(['#combine_container'], 2, { rotationZ: 400, ease: 'linear' }, "frame_3+=0.5")
+    .to(['#combine_container'], 1.5, { rotationZ: 800, ease: 'linear' }, "frame_3+=2.5")
+    .staggerTo(['#cdot4', '#wdot4', '#cdot3', '#wdot3', '#cdot2', '#wdot2', '#cdot1', '#wdot1',], 0.17, { scale: 0.5, ease: 'linear' }, 0.17, 'frame_3+=2.48')
+
+    .to(['#cdot4'], 0, { autoAlpha: 0, ease: 'linear' }, "frame_3+=2.65")
+    .to(['#dcdot4'], 0, { autoAlpha: 1, ease: 'linear' }, "frame_3+=2.65")
+    .to('#dcdot4', {
+      scale: 0.1, left: -8, top: -14, backgroundColor: '#fff',
+      duration: 1.5, yoyo: false, ease: Power2.easeOut, motionPath: { path: "#path2", autoRotate: true, alignOrigin: [0, 0] }
+    }, "frame_3+=2.65")
+
+    .to(['#wdot4'], 0, { autoAlpha: 0, ease: 'linear' }, "frame_3+=2.82")
+    .to(['#dwdot4'], 0, { autoAlpha: 1, ease: 'linear' }, "frame_3+=2.82")
+    .to('#dwdot4', {
+      scale: 0.1, left: -8, top: -14, backgroundColor: '#fff',
+      duration: 1.33, yoyo: false, ease: Power2.easeOut, motionPath: { path: "#path2", autoRotate: true, alignOrigin: [0, 0] }
+    }, "frame_3+=2.82")
+
+    .to(['#cdot3'], 0, { autoAlpha: 0, ease: 'linear' }, "frame_3+=2.99")
+    .to(['#dcdot3'], 0, { autoAlpha: 1, ease: 'linear' }, "frame_3+=2.99")
+    .to('#dcdot3', {
+      scale: 0.1, left: -8, top: -14, backgroundColor: '#fff',
+      duration: 1.16, yoyo: false, ease: Power2.easeOut, motionPath: { path: "#path2", autoRotate: true, alignOrigin: [0, 0] }
+    }, "frame_3+=2.99")
+
+    .to(['#wdot3'], 0, { autoAlpha: 0, ease: 'linear' }, "frame_3+=3.15")
+    .to(['#dwdot3'], 0, { autoAlpha: 1, ease: 'linear' }, "frame_3+=3.15")
+    .to('#dwdot3', {
+      scale: 0.1, left: -8, top: -14, backgroundColor: '#fff',
+      duration: 1, yoyo: false, ease: Power2.easeOut, motionPath: { path: "#path2", autoRotate: true, alignOrigin: [0, 0] }
+    }, "frame_3+=3.15")
+
+    .to(['#cdot2'], 0, { autoAlpha: 0, ease: 'linear' }, "frame_3+=3.32")
+    .to(['#dcdot2'], 0, { autoAlpha: 1, ease: 'linear' }, "frame_3+=3.32")
+    .to('#dcdot2', {
+      scale: 0.1, left: -8, top: -14, backgroundColor: '#fff',
+      duration: 0.83, yoyo: false, ease: Power2.easeOut, motionPath: { path: "#path2", autoRotate: true, alignOrigin: [0, 0] }
+    }, "frame_3+=3.32")
+
+    .to(['#wdot2'], 0, { autoAlpha: 0, ease: 'linear' }, "frame_3+=3.49")
+    .to(['#dwdot2'], 0, { autoAlpha: 1, ease: 'linear' }, "frame_3+=3.49")
+    .to('#dwdot2', {
+      scale: 0.1, left: -8, top: -14, backgroundColor: '#fff',
+      duration: 0.66, yoyo: false, ease: Power2.easeOut, motionPath: { path: "#path2", autoRotate: true, alignOrigin: [0, 0] }
+    }, "frame_3+=3.49")
+
+    .to(['#cdot1'], 0, { autoAlpha: 0, ease: 'linear' }, "frame_3+=3.66")
+    .to(['#dcdot1'], 0, { autoAlpha: 1, ease: 'linear' }, "frame_3+=3.66")
+    .to('#dcdot1', {
+      scale: 0.1, left: -8, top: -14, backgroundColor: '#fff',
+      duration: 0.49, yoyo: false, ease: Power2.easeOut, motionPath: { path: "#path2", autoRotate: true, alignOrigin: [0, 0] }
+    }, "frame_3+=3.66")
+
+    .to(['#wdot1'], 0, { autoAlpha: 0, ease: 'linear' }, "frame_3+=3.83")
+    .to(['#dwdot1'], 0, { autoAlpha: 1, ease: 'linear' }, "frame_3+=3.83")
+    .to('#dwdot1', {
+      scale: 0.1, left: -8, top: -14, backgroundColor: '#fff',
+      duration: 0.32, yoyo: false, ease: Power2.easeOut, motionPath: { path: "#path2", autoRotate: true, alignOrigin: [0, 0] }
+    }, "frame_3+=3.83")
 
   // tl.addLabel('frame_4', 9.5)
   //   .to(['#h3', '#combine_container'], 0.5, { autoAlpha: 0, ease: Power2.easeOut }, "frame_4")
