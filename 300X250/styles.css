@@ -120,36 +120,12 @@ img {
   top: 31px
 }
 
-.upper {
-  height: 116px;
-}
-
-.lower {
-  height: 135px;
-
-}
-
-#sugar_wrpr {
-  position: absolute;
-  left: -134px;
-  top: -6px;
-  width: 280px;
-  height: 280px;
-  border-radius: 140px;
-}
-
-#sugar_wrpr span {
-  width: 20px;
-  height: 20px;
-  border-radius: 20px;
-  background-color: #fff;
-  position: absolute;
-}
-
 #combine_container {
   position: absolute;
-  width: 172px;
-  height: 172px;
+  /* width: 172px;
+  height: 172px; */
+  width: 472px;
+  height: 472px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -280,13 +256,13 @@ img {
   width: 0px;
   height: 0px;
   border-radius: 100%;
-  border: 3px solid #02bbee15;
-  border-top-color: #02bbee25;
-  border-left-color: #02bbee25;
-  background-color: #05153255;
+  border: 3px solid #02bbee30;
+  border-top-color: #02bbee35;
+  border-left-color: #02bbee35;
+  background-color: #05153265;
   top: 37.25%;
   left: 50%;
-  transform: translate(-50%, -50%) rotateX(60deg);
+  transform: translate(-50%, -50%) rotateX(60deg) rotateZ(45deg);
   transform-origin: center;
 }
 

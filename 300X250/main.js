@@ -85,15 +85,13 @@ function animate() {
     .to(['#ripple4'], 0.75, { autoAlpha: 1, width: '80px', height: '80px', ease: Power2.easeOut }, "frame_2+=1.53")
     .to(['#ripple4'], 0.2, { autoAlpha: 0, ease: Power2.easeNone }, "frame_2+=2.28")
 
-  // .to(['#h2', '#cupU', '#cupL', '#sugar_container', '#upper'], 0.5, { autoAlpha: 1, ease: Power2.easeOut }, "frame_2+=0.5")
-  // .to(['#lower'], 0, { autoAlpha: 1, ease: Power2.easeOut }, "frame_2+=1")
-  // .to(['#sugar_wrpr'], 2, { x: 0, rotationZ: 70, ease: Power2.ease }, "frame_2+=1.5")
 
-  // tl.addLabel('frame_3', 5.5)
-  //   .to(['#h2', '#sugar_container'], 0.5, { autoAlpha: 0, ease: Power2.easeOut }, "frame_3")
-  //   .staggerTo(['#wdot1', '#cdot1', '#wdot2', '#cdot2', '#wdot3', '#cdot3', '#wdot4', '#cdot4',], 0.125, { autoAlpha: 1, ease: Power2.easeNone }, 0.125, 'frame_+=0')
-  //   .to(['#h3', '#combine_container'], 0.5, { autoAlpha: 1, ease: Power2.easeOut }, "frame_3+=0.5")
-  //   .to(['#combine_container'], 4, { rotationZ: 45, ease: Power2.easeNone }, "frame_3+=2")
+  tl.addLabel('frame_3', 5.5)
+    .to(['#h2', '#sugar_container'], 0.5, { autoAlpha: 0, y: "100%", ease: Power2.easeOut }, "frame_3")
+    // .staggerTo(['#wdot1', '#cdot1', '#wdot2', '#cdot2', '#wdot3', '#cdot3', '#wdot4', '#cdot4',], 0.125, { autoAlpha: 1, ease: Power2.easeNone }, 0.125, 'frame_+=0')
+    .to(['#h3', '#combine_container'], 0.5, { autoAlpha: 1, ease: Power2.easeOut }, "frame_3+=0.5")
+    .to(['#combine_container'], 4, { rotationZ: 45, ease: Power2.easeNone }, "frame_3+=0.5")
+    .to(['#combine_container'], 4, { rotationZ: 45, ease: Power2.easeNone }, "frame_3+=2")
 
   // tl.addLabel('frame_4', 9.5)
   //   .to(['#h3', '#combine_container'], 0.5, { autoAlpha: 0, ease: Power2.easeOut }, "frame_4")
