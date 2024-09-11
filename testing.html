@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/MotionPathPlugin.min.js"></script>
+  <title>Example</title>
+  <style>
+    .dot {
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    #dot1 {
+      top: 50px;
+      left: 50px;
+    }
+
+    #dot2 {
+      top: 50px;
+      left: 250px;
+    }
+
+    #dot3 {
+      top: 250px;
+      left: 50px;
+    }
+
+    #dot4 {
+      top: 250px;
+      left: 250px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <svg width="300" height="250" xmlns="http://www.w3.org/2000/svg">
+    <path fill="none" stroke="black"
+      d="M97.48,153.78c-11.79,5.62-21.54,8.35-32.84,10.7s-22.47-.86-31.71-7.16C12.52,143.4,3.25,116.9,1.38,93.23s2.7-47.43,15.26-67.01C28.12,8.35,48.29-4.52,69.85,3.37c19.85,7.27,31.93,28.54,37.43,47.86,1.01,3.55,1.83,7.15,2.48,10.78" />
+    <!-- <path d="M 150,150 A 50,50 0 0,1 150,50" stroke="black" fill="none" stroke-width="2" /> -->
+    <!-- <path fill="none" stroke="black" stroke-width="2" d="M150,90 a70,80 0 1,0 -10,80"></path> -->
+    <!-- <path id="path" stroke="black" stroke-width="2" d="M9,100c0,0,18.53-41.58,49.91-65.11c30-22.5,65.81-24.88,77.39-24.88c33.87,0,57.55,11.71,77.05,28.47c23.09,19.85,40.33,46.79,61.71,69.77c24.09,25.89,53.44,46.75,102.37,46.75c22.23,0,40.62-2.83,55.84-7.43c27.97-8.45,44.21-22.88,54.78-36.7c14.35-18.75,16.43-36.37,16.43-36.37"/> -->
+  </svg>
+  <div id="route1">
+    <path fill="none" stroke="none" stroke-width="1" d="M150,90 a70,80 0 1,0 -10,80"></path>
+  </div>
+
+  <!-- Dots to animate -->
+  <div id="dot1" class="dot"></div>
+  <div id="dot2" class="dot"></div>
+  <div id="dot3" class="dot"></div>
+  <div id="dot4" class="dot"></div>
+
+  <!-- Include GSAP from CDN -->
+  <script>
+    // Define the target point for the dots to converge to
+    const targetX = 150; // X-coordinate of the convergence point
+    const targetY = 150; // Y-coordinate of the convergence point
+
+    // Animate each dot to the target point
+    gsap.to("#dot1", { duration: 2, x: targetX - 50, y: targetY - 50 });
+    gsap.to("#dot2", { duration: 2, x: targetX - 250, y: targetY - 50 });
+    gsap.to("#dot3", { duration: 2, x: targetX - 50, y: targetY - 250 });
+    gsap.to("#dot4", { duration: 2, x: targetX - 250, y: targetY - 250 });
+  </script>
+</body>
+
+</html>
