@@ -20,7 +20,7 @@ function animate() {
   // tl.set(["#sugar_wrpr"], { x: -10, rotationZ: -70, force3D: true });
   tl.set(["#manageBtn .btn_overlay"], { autoAlpha: 0, scale: 0, force3D: true });
   tl.set(["#logo"], { autoAlpha: 0, scale: 0.25, force3D: true });
-  tl.set(["#sugar_container"], { autoAlpha: 0, y: "100%", force3D: true });
+  tl.set(["#h2","#sugar_container"], { autoAlpha: 0, y: "100%", force3D: true });
   // tl.set(["#cross"], { scale:(0.6,0.8), force3D: true });
   // tl.set(["#dots"], { scale: 0.8, force3D: true });
 
@@ -32,48 +32,49 @@ function animate() {
     .to(['#dots'], 0.25, { width: 'calc(100% - 20px)', height: 'calc(100% - 15px)', x: 10, y: 7.5, ease: Power2.ease }, "frame_1+=0.5")
     .to(['#dots'], 0.25, { width: '100%', height: '100%', x: 0, y: 0, ease: Power2.ease }, "frame_1+=0.75")
 
-  tl.addLabel('frame_2', 2)
+  tl.addLabel('frame_2', 3)
 
-    .to(['#h1'], 0.5, { autoAlpha: 0, ease: Power2.easeOut }, "frame_2")
-    .to(['#cross'], 0.5, { scale: 0, autoAlpha: 0, ease: Power2.easeOut }, "frame_2")
-    .to(['.l-cross'], 0.5, { backgroundColor: '#2ab3d5', autoAlpha: 0, ease: Power2.easeOut }, "frame_2")
-    .to(['#dots'], 0.25, { width: 'calc(100% - 50px)', x: 25, ease: Power2.ease }, "frame_2+=1")
-    .to(['#dots'], 1.5, { rotationZ: 460, ease: Power2.easeNone }, "frame_2+=1")
+    .to(['#h1'], 0.5, { autoAlpha: 0, ease: Power2.easeOut }, "frame_2+=0")
+    .to(['#cross'], 0.5, { scale: 0, autoAlpha: 0, ease: Power2.easeOut }, "frame_2+=0")
+    .to(['.l-cross'], 0.5, { backgroundColor: '#2ab3d5', autoAlpha: 0, ease: Power2.easeOut }, "frame_2+=0")
+    .to(['#dots'], 0.25, { width: 'calc(100% - 50px)', x: 25, ease: Power2.ease }, "frame_2+=0")
+    .to(['#dots'], 1.5, { rotationZ: 460, ease: Power2.easeNone }, "frame_2+=0")
 
 
-    .to(['#circle-two'], 0, { autoAlpha: 0, ease: Power2.easeNone }, "frame_2+=1.15")
-    .to(['#dcircle-two'], 0, { autoAlpha: 1, ease: Power2.easeNone }, "frame_2+=1.15")
+    .to(['#circle-two'], 0, { autoAlpha: 0, ease: Power2.easeNone }, "frame_2+=0.15")
+    .to(['#dcircle-two'], 0, { autoAlpha: 1, ease: Power2.easeNone }, "frame_2+=0.15")
     .to("#dcircle-two", {
       left: -14, top: 7,
       duration: 1, yoyo: false, ease: 'linear', motionPath: { path: "#path", autoRotate: true, alignOrigin: [0, 0] }
-    }, "frame_2+=1.15")
+    }, "frame_2+=0.15")
 
-    .to(['#circle-one'], 0, { autoAlpha: 0, ease: Power2.easeNone }, "frame_2+=1.32")
-    .to(['#dcircle-one'], 0, { autoAlpha: 1, ease: Power2.easeNone }, "frame_2+=1.32")
+    .to(['#circle-one'], 0, { autoAlpha: 0, ease: Power2.easeNone }, "frame_2+=0.32")
+    .to(['#dcircle-one'], 0, { autoAlpha: 1, ease: Power2.easeNone }, "frame_2+=0.32")
     .to("#dcircle-one", {
       left: -14, top: 7,
       duration: 1, yoyo: false, ease: 'linear', motionPath: { path: "#path", autoRotate: true, alignOrigin: [0, 0] }
-    }, "frame_2+=1.32")
+    }, "frame_2+=0.32")
 
-    .to(['#circle-four'], 0, { autoAlpha: 0, ease: Power2.easeNone }, "frame_2+=1.53")
-    .to(['#dcircle-four'], 0, { autoAlpha: 1, ease: Power2.easeNone }, "frame_2+=1.53")
+    .to(['#circle-four'], 0, { autoAlpha: 0, ease: Power2.easeNone }, "frame_2+=0.53")
+    .to(['#dcircle-four'], 0, { autoAlpha: 1, ease: Power2.easeNone }, "frame_2+=0.53")
     .to("#dcircle-four", {
       left: -14, top: 7,
       duration: 1, yoyo: false, ease: 'linear', motionPath: { path: "#path", autoRotate: true, alignOrigin: [0, 0] }
-    }, "frame_2+=1.53")
+    }, "frame_2+=0.53")
 
-    .to(['#circle-three'], 0, { autoAlpha: 0, ease: Power2.easeNone }, "frame_2+=1.82")
-    .to(['#dcircle-three'], 0, { autoAlpha: 1, ease: Power2.easeNone }, "frame_2+=1.82")
+    .to(['#circle-three'], 0, { autoAlpha: 0, ease: Power2.easeNone }, "frame_2+=0.82")
+    .to(['#dcircle-three'], 0, { autoAlpha: 1, ease: Power2.easeNone }, "frame_2+=0.82")
     .to("#dcircle-three", {
       left: -14, top: 7,
       duration: 1, yoyo: false, ease: 'linear', motionPath: { path: "#path", autoRotate: true, alignOrigin: [0, 0] }
-    }, "frame_2+=1.82")
+    }, "frame_2+=0.82")
 
-    .to(['#sugar_container'], 0.5, { autoAlpha: 1, y: 0, ease: Power2.easeOut }, "frame_2+=1.9")
-    .to(['#dcircle-two'], 0, { autoAlpha: 0, ease: Power2.easeNone }, "frame_2+=2.15")
-    .to(['#dcircle-one'], 0, { autoAlpha: 0, ease: Power2.easeNone }, "frame_2+=2.32")
-    .to(['#dcircle-four'], 0, { autoAlpha: 0, ease: Power2.easeNone }, "frame_2+=2.53")
-    .to(['#dcircle-three'], 0, { autoAlpha: 0, ease: Power2.easeNone }, "frame_2+=2.82")
+    .to(['#h2', '#sugar_container'], 0.5, { autoAlpha: 1, y: 0, ease: Power2.easeOut }, "frame_2+=0.9")
+
+    .to(['#dcircle-two'], 0, { autoAlpha: 0, ease: Power2.easeNone }, "frame_2+=1.15")
+    .to(['#dcircle-one'], 0, { autoAlpha: 0, ease: Power2.easeNone }, "frame_2+=1.32")
+    .to(['#dcircle-four'], 0, { autoAlpha: 0, ease: Power2.easeNone }, "frame_2+=1.53")
+    .to(['#dcircle-three'], 0, { autoAlpha: 0, ease: Power2.easeNone }, "frame_2+=1.82")
 
 
   // .to(['#h2', '#cupU', '#cupL', '#sugar_container', '#upper'], 0.5, { autoAlpha: 1, ease: Power2.easeOut }, "frame_2+=0.5")
