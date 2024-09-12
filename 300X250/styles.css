@@ -28,7 +28,7 @@ body * {
 div,
 span,
 img {
-  transform: all 0.1s ease;
+  transition: all 0s linear;
 }
 
 img {
@@ -183,10 +183,22 @@ img {
 }
 
 .content2 {
+  position: relative;
   margin-top: 6px;
   font-size: 38px;
   letter-spacing: 0.3px;
+  height: 33px;
+  display: flex;
 }
+
+.content2 span {
+  height: fit-content;
+}
+
+.content2 span:first-child {
+  width: 14px;
+}
+
 
 .phnLogo {
   width: 63px;
